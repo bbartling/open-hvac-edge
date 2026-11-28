@@ -61,7 +61,7 @@ def test_services_are_read_only_non_root_and_bounded():
     dockerfile = (ROOT / "Dockerfile").read_text(encoding="utf-8")
     assert "USER edge" in dockerfile
     assert "HEALTHCHECK" in dockerfile
-    assert "python:3.15-slim@sha256:" in dockerfile
+    assert "python:3.14-slim@sha256:" in dockerfile
     assert services["caddy"]["image"].startswith("caddy:2@sha256:")
     for name in ("edge-bacnet", "edge-niagara", "caddy"):
         svc = services[name]
