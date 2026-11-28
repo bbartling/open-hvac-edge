@@ -23,7 +23,7 @@ Diagram notes and Mermaid sources: [docs/architecture/](docs/architecture/README
 
 ## Test bench
 
-Python 3.11 or newer for the library. CI runs 3.11, 3.12, 3.13, and 3.14. The Pi image uses Python 3.15.
+Python 3.11 or newer for the library. CI runs 3.11, 3.12, 3.13, and 3.14. The Pi image uses Python 3.14.
 
 ```bash
 python3 -m venv .venv

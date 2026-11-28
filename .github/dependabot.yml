@@ -29,18 +29,30 @@ updates:
     directory: "/examples/edge-microdot"
     schedule:
       interval: weekly
+    ignore:
+      - dependency-name: "python"
+        versions: [">=3.15"]
   - package-ecosystem: docker
     directory: "/examples/live-ingest"
     schedule:
       interval: weekly
+    ignore:
+      - dependency-name: "python"
+        versions: [">=3.15"]
   - package-ecosystem: docker
     directory: "/examples/sparql-playground"
     schedule:
       interval: weekly
+    ignore:
+      - dependency-name: "python"
+        versions: [">=3.15"]
   - package-ecosystem: docker
     directory: "/central"
     schedule:
       interval: weekly
+    ignore:
+      - dependency-name: "python"
+        versions: [">=3.15"]
   - package-ecosystem: docker-compose
     directory: "/examples/edge-microdot"
     schedule:

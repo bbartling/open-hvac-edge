@@ -7,7 +7,7 @@ name = "edge-microdot"
 version = "0.1.0"
 description = "Lightweight Microdot edge ingest for BACnet and Niagara on resource-constrained Pi hosts"
 license = {text = "MIT"}
-requires-python = ">=3.15"
+requires-python = ">=3.14"
 dependencies = [
     "microdot==2.8.0",
     "duckdb==2.0.1",
