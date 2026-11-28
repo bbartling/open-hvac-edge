@@ -51,7 +51,7 @@ def test_ram_rows_and_duckdb_memory_limit(tmp_path):
         """
         INSERT INTO fdd.sample_store
         SELECT 'demo', 'bacnet://1/analog-input,1',
-               TIMESTAMPTZ '2026-11-26 00:00:00+00' + (i * INTERVAL 1 SECOND),
+               CURRENT_TIMESTAMP - INTERVAL 1 HOUR + (i * INTERVAL 1 SECOND),
                1.0, NULL, 'ok'
         FROM range(150) t(i)
         """
