@@ -30,7 +30,7 @@ station and the bench. Nothing in this tool writes to the station.
 3. **Read-only service settings** (all exist in 1.12):
    - `writesEnabled` = false (it defaults to true; change it)
    - `modelEditsEnabled` = false, `securityEditsEnabled` = false (defaults)
-   - `allowedPathPatterns` = `slot:/Drivers/*` (default is `slot:/*`)
+   - `allowedPathPatterns` = `slot:/Drivers/**` (default is `slot:/*`; add `slot:/Drivers` as well if you need the Drivers folder node itself)
    - optional `requireAuthorizationHeader` = true (then pass `--ws-auth-header`
      to `export-223p`)
    Save the station.
@@ -39,7 +39,10 @@ station and the bench. Nothing in this tool writes to the station.
    that is not committed (for example `path/to/station.env`).
 5. **Discover and add BACnet proxy points** under the BacnetNetwork for **both**
    bench devices, into each device's Points folder (or the network Points
-   extension). No Haystack tagging is required for `export-223p`.
+   extension). No Haystack tagging is required for `export-223p`. On live HVAC
+   systems, map only the points you need; a full object list plus polling can
+   bottleneck IoT links and legacy MS/TP trunks. A complete mapping of the bench
+   FEC (device 5007) is a test-bench exception, not production practice.
 6. **Check** `https://localhost/stream/health` after login: JSON should report
    `apiVersion` 1.12. Then run:
 
